@@ -1,0 +1,81 @@
+function getMaxNumber(numbersArray){ }
+
+no clue how he wants you to do this but here's an easy way.
+function getMaxNumber(arr) {
+    let answer = []
+      answer.push(Math.max(...arr))
+    return answer
+  }
+
+console.log( getMaxNumber([4, 5, 1, 3, 12, 144]) );
+
+
+function getPositiveNumbersAverage(numbersArray){ }
+
+
+function getPositiveNumbersAverage(numbers) {
+    var negatives = [];
+    var sum = 0;
+    for(var i = 0; i < numbers.length; i++) {
+      if(numbers[i] < 0) {
+        negatives.push(numbers[i]);
+      }else{
+        sum += numbers[i];
+      }
+    }
+    console.log(negatives);
+    var numberCount = numbers.length;
+    var average = sum / numberCount;
+    return average;
+  }
+
+  var avg = getPositiveNumbersAverage([1, 2, 3, 4, 5, -2, 23, -1, -13, 155,-32]);
+  console.log(avg);
+
+
+let student1 = [
+    {iD: 0, name:"ალექსანდრე" , gpa:2.3},
+    {iD: 1, name:"მალხაზი" , gpa:2.7},
+    {iD: 2, name:"ნინო" , gpa:1.6},
+    {iD: 3, name:"მარი" , gpa:3.2},
+    {iD: 4, name:"ელენე" , gpa:3.5},
+    {iD: 5, name:"გიორგი" , gpa: 3.9},
+    {iD: 6, name:"რევაზი" , gpa:3.4},
+    {iD: 7, name:"დავითი" , gpa:3.3},
+    {iD: 8, name:"ალეკო" , gpa:3.3}
+];
+
+let student = [
+    {iD: 9, name:"მირიანი" , gpa:2.7},
+    {iD: 10, name:"მიხო" , gpa:3.7},
+    {iD: 11, name:"ნინუცა" , gpa:2.6},
+    {iD: 12, name:"მილენა" , gpa:2.2},
+    {iD: 13, name:"გიო" , gpa:3.6},
+    {iD: 14, name:"რიტა" , gpa: 4.0},
+    {iD: 15, name:"ნიკა" , gpa:3.6},
+    {iD: 16, name:"დათო" , gpa:3.2},
+    {iD: 17, name:"სანდრო" , gpa:3.4}
+];
+
+function higherGpa (firstBase , secondBase){
+
+    let result = [];
+
+    for(let i=0 ; i<firstBase.length;i++){
+        result.push(firstBase[i].gpa);
+    }
+    for(let i=0 ; i<secondBase.length;i++){
+        result.push(secondBase[i].gpa);
+    }
+    result.sort();
+    let j = result.length-1;
+
+    let highGPA = [];
+    for(let i = 0;i<5;i++){
+        highGPA.push(result[j]);
+        j--;
+    }
+    alert(highGPA);
+}
+
+higherGpa(student,student1);
